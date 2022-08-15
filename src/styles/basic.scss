@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+@import './vars.scss';
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: $font-family-base;
+  font-weight: 400;
+  color: var(--c-text-1);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  direction: ltr;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@each $break-point, $font-size in $font-break-points {
+  @media screen and (min-width: $break-point) {
+    html {
+      font-size: $font-size;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--c-bg);
+  transition: background-color 0.2s ease;
+}
+
+[data-theme='light'] .vp-code-dark {
+  display: none;
+}
+
+[data-theme='dark'] .vp-code-light {
+  display: none;
+}
