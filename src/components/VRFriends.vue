@@ -54,8 +54,9 @@ const { theme } = useData<VRThemeConfig>()
 
     li {
       list-style: none;
-      display: flex;
+      display: inline-flex;
       align-items: center;
+      margin: 0 16px 16px 0;
 
       .avatarBox {
         user-select: none;
@@ -119,10 +120,6 @@ const { theme } = useData<VRThemeConfig>()
         .tk {
           font-size: 14px;
         }
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 10px;
       }
     }
   }

@@ -5,6 +5,7 @@ import { Icon } from '@iconify/vue'
 import CenterImg from './components/global/CenterImg.vue'
 import BookMark from './components/global/BookMark.vue'
 import VRFriends from './components/VRFriends.vue'
+import RelativeTime from './components/global/RelativeTime.vue'
 
 // Layout
 import Layout from './VRLayout.vue'
@@ -23,6 +24,7 @@ const theme: Theme = {
     app.component('CenterImg', CenterImg)
     app.component('BookMark', BookMark)
     app.component('VRFriends', VRFriends)
+    app.component('RelativeTime', RelativeTime)
   }
 }
 

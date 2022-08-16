@@ -2,7 +2,6 @@
   <div class="VRHome">
     <h1 class="title">{{ frontmatter.hero.title }}</h1>
     <h3 class="subTitle">{{ frontmatter.hero.subTitle }}</h3>
-    <hr />
     <Content :class="{ VRMarkdown: true }" />
     <slot name="test" />
     <template v-for="group in frontmatter.hero.showGroups" :key="group.text">
@@ -32,7 +31,7 @@ const { frontmatter } = useData<VRThemeConfig>()
   justify-content: center;
   max-width: $max-not-toc-content-width;
   margin: 0 auto;
-  padding: 30px 20px 20px 20px;
+  padding: 30px 0 20px 0;
 
   hr {
     height: 0;
