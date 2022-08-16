@@ -308,7 +308,7 @@ html[data-theme='dark'] {
 
 .VRMarkdown [class*='language-'] pre {
   margin: 0;
-  padding: 16px 0;
+  padding: 14px 0;
   overflow-x: auto;
   background: transparent;
 }
@@ -369,7 +369,7 @@ html[data-theme='dark'] {
   transition: border-color $u-duration ease, color $u-duration ease;
 }
 
-.VRMarkdown [class*='language-'] > span.copy {
+.VRMarkdown [class*='language-'] > button.copy {
   position: absolute;
   top: 8px;
   right: 0;
@@ -377,8 +377,9 @@ html[data-theme='dark'] {
   display: block;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+  border: none;
   opacity: 0;
   cursor: pointer;
   background-color: var(--code-copy-code-hover-bg);
@@ -389,22 +390,22 @@ html[data-theme='dark'] {
   transition: opacity 0.25s;
 }
 
-.VRMarkdown [class*='language-']:hover > span.copy {
+.VRMarkdown [class*='language-']:hover > button.copy {
   opacity: 1;
 }
 
-.VRMarkdown [class*='language-'] > span.copy:hover {
+.VRMarkdown [class*='language-'] > button.copy:hover {
   background-color: var(--code-copy-code-hover-bg);
 }
 
-.VRMarkdown [class*='language-'] > span.copy.copied,
-.VRMarkdown [class*='language-'] > span.copy:hover.copied {
+.VRMarkdown [class*='language-'] > button.copy.copied,
+.VRMarkdown [class*='language-'] > button.copy:hover.copied {
   background-color: var(--code-copy-code-hover-bg);
   background-image: var(--icon-copied);
 }
 
-.VRMarkdown [class*='language-'] > span.copy.copied::before,
-.VRMarkdown [class*='language-'] > span.copy:hover.copied::before {
+.VRMarkdown [class*='language-'] > button.copy.copied::before,
+.VRMarkdown [class*='language-'] > button.copy:hover.copied::before {
   position: relative;
   left: -65px;
   display: block;
@@ -417,6 +418,22 @@ html[data-theme='dark'] {
   color: var(--code-copy-code-active-text);
   background-color: var(--code-copy-code-hover-bg);
   white-space: nowrap;
+}
+
+.VRMarkdown [class*='language-'] > .lang {
+  position: absolute;
+  pointer-events: none;
+  top: 2px;
+  right: 8px;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-text-2);
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.VRMarkdown [class*='language-']:hover > .lang {
+  opacity: 0;
 }
 
 // 移动端适配

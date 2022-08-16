@@ -79,7 +79,7 @@ export default function useCopy() {
       () => page.value.relativePath,
       () => {
         nextTick(() => {
-          document.querySelectorAll<HTMLSpanElement>('.VRMarkdown div[class*="language-"] > span.copy').forEach(handleElement)
+          document.querySelectorAll<HTMLSpanElement>('.VRMarkdown div[class*="language-"] > button.copy').forEach(handleElement)
         })
       },
       { immediate: true, flush: 'post' }
