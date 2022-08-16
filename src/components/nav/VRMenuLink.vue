@@ -19,16 +19,19 @@ const { page } = useData<VRThemeConfig>()
 
 <style lang="scss">
 .VRMenuLink {
-  padding: 12px 15px;
   font-size: 14px;
   cursor: pointer;
+  white-space: nowrap;
   user-select: none;
+
+  .VRLink {
+    padding: 8px;
+  }
 
   &:hover,
   &.isActive {
-    background-color: var(--c-bg-mute);
-
     .VRLink {
+      background-color: var(--c-bg-mute);
       color: var(--c-brand);
     }
   }
